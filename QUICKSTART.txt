@@ -1,0 +1,95 @@
+╔════════════════════════════════════════════════════════════╗
+║         AI TRIGGERBOT - QUICK START GUIDE                 ║
+╚════════════════════════════════════════════════════════════╝
+
+📦 KURULUM (İlk Kez)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. INSTALL.bat dosyasını çalıştır
+2. Kurulum tamamlanana kadar bekle (5-10 dakika)
+3. models/ klasörüne yolo11s.pt modelini koy
+
+🚀 ÇALIŞTIRMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. START.bat dosyasını çalıştır
+2. Debug penceresi açılacak
+3. F2 tuşuna basarak aktif et
+4. Oyunu tam ekran modda aç
+5. Nişangahı hedefe getir
+
+🎮 KONTROLLER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F2  → Aktif/Pasif
+F3  → Confidence Artır (+0.05)
+F4  → Confidence Azalt (-0.05)
+F5  → Hedef Önceliği Değiştir
+F6  → Ayarları Kaydet
+F7  → Ayarları Yükle
+F8  → PANİK MODU (Acil Durdur)
+F9  → Debug Penceresini Aç/Kapa
+F10 → Profil Değiştir
+F11 → Heatmap Aç/Kapa
+F12 → Ses Uyarıları Aç/Kapa
+
+⚙️ İLK AYARLAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. F4 ile confidence'ı 0.15-0.20'ye düşür
+2. F10 ile profil seç (balanced önerilen)
+3. F9 ile debug penceresini aç
+4. F2 ile aktif et
+
+💡 İPUÇLARI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Confidence çok yüksekse tespit olmaz → F4 ile azalt
+• Confidence çok düşükse yanlış tespit → F3 ile artır
+• Debug penceresinde FPS'i izle (100+ ideal)
+• Oyun tam ekran modda olmalı
+• İlk kullanımda "balanced" profili dene
+
+🐛 SORUN GİDERME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Pencere açılmıyor:
+  → F9 tuşuna bas
+
+Tespit olmuyor:
+  → F4 ile confidence'ı azalt (0.15-0.20)
+  → Debug penceresinde "Found: 0" yazıyorsa model sorunu
+
+Düşük FPS:
+  → config.json'da box_size'ı 300'e düşür
+  → Heatmap'i kapat (F11)
+
+Ateş etmiyor:
+  → F2 ile aktif olduğundan emin ol
+  → Nişangahı hedefe yaklaştır
+  → Debug penceresinde sarı çemberin içinde olmalı
+
+📁 DOSYA YAPISI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+START.bat           → Uygulamayı başlat
+INSTALL.bat         → İlk kurulum
+app.py              → Ana uygulama
+config.json         → Ayarlar (otomatik oluşur)
+README.md           → Detaylı dokümantasyon
+
+core/               → Çekirdek modüller
+ui/                 → Görsel arayüz
+utils/              → Yardımcı araçlar
+models/             → AI model (yolo11s.pt)
+
+⚠️ UYARI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Sadece eğitim amaçlıdır
+• Online oyunlarda kullanmayın
+• Anti-cheat sistemleri tespit edebilir
+• Etik kullanım sorumluluğu kullanıcıya aittir
+
+📧 DESTEK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Sorun yaşıyorsan:
+1. README.md dosyasını oku
+2. config.json'u sil ve yeniden başlat
+3. INSTALL.bat'ı tekrar çalıştır
+
+╔════════════════════════════════════════════════════════════╗
+║  Başarılar! 🎯                                            ║
+╚════════════════════════════════════════════════════════════╝
